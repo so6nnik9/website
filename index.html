@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #lela {
+      color: red;
+      background-size: cover;
+      background-image: url("https://i.ytimg.com/vi/Nf3sEUtItEM/hqdefault.jpg");
+      width: 40vh;
+      height: 30vh;
+      text-align: center;
+      margin-left: 70vw;
+    }
+    body {
+      width: 10vh;
+      height: 40vh;
+      background-size: cover;
+    }
+    .mgeli {
+      width: 100vw;
+      color: lightgrey;
+      text-align: center;
+      text-shadow: 19px 11px rgb(43, 6, 207);
+    }
+    .knofka {
+      margin-left: 50vw;
+      transform: translateX(-50%);
+      margin-top: 50px;
+      color: rgb(0, 4, 255);
+      background-color: rgb(21, 255, 0);
+      padding: 1cm;
+      font-size: 1cm;
+      font-family: "Fredoka One", cursive;
+      border-radius: 2cm;
+    }
+    .knofka:hover {
+      border-radius: 0;
+    }
+    .background {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      z-index: -1;
+    }
+    .kaci {
+      display: none;
+      position: absolute;
+      left: 50vw;
+      top: 10vh;
+      transform: translateX(-50%);
+    }
+    .knofka2 {
+      color: rgb(72, 0, 255);
+      position: relative;
+      left: 86vw;
+      background-color: black;
+      font-size: 26px;
+      border-radius: 2cm;
+      padding: 16px;
+    }
+    .micini {
+      position: absolute;
+      top: 65vh;
+      left: 40vw;
+      display: none;
+    }
+    .knofka3 {
+      color: brown;
+      top: 10vh;
+      position: absolute;
+      font-size: 20px;
+      left: 10vw;
+    }
+    .meloti {
+      width: 300px;
+      height: auto;
+      position: absolute;
+      display: none;
+    }
+  </style>
+
+  <body>
+    <img
+      src="https://teasblogi.files.wordpress.com/2014/09/orgia.jpg?w=723&h=452"
+      class="background"
+    />
+    <img
+      src="https://helios-i.mashable.com/imagery/articles/02DYjwhBb9j8loUs6VoqJF8/hero-image.fill.size_1248x702.v1623370230.png"
+      class="meloti"
+    />
+    <video class="kaci" width="250">
+      <source src="videoplayback.mp4" type="video/webm" />
+    </video>
+    <h1 id="lela">yleoba</h1>
+    <h2>siroba</h2>
+    <h5>yleoba</h5>
+    <h1 class="mgeli">yvela mamatmavalis DEDAMOVTYAN</h1>
+    <button class="knofka" onclick="sheYleo()">0y0l0000e100o000:D00</button>
+    <a href="/meore.html">linki meore</a>
+    <a href="/meore.html">linki meore</a>
+    <iframe
+      width="260"
+      height="115"
+      src="https://www.youtube.com/embed/p9R1yknysvI"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+    <input class="mwovelaamwevdamwevi" type="range" max="360" min="0" />
+    <button class="knofka2" onclick="micini()">momvals ganaxeb=)</button>
+    <button class="knofka3" onclick="knofka3()">START</button>
+    <video class="micini" width="250">
+      <source src="micini.mp4" />
+    </video>
+  </body>
+
+  <script>
+    const mwoveliInput = document.querySelector(".mwovelaamwevdamwevi");
+    const backgroundElement = document.querySelector(".background");
+    mwoveliInput.addEventListener("input", function (e) {
+      backgroundElement.style.filter = `hue-rotate(${e.target.value}deg)`;
+    });
+
+    function sheYleo(e) {
+      const kaci = document.querySelector(".kaci");
+      kaci.style.display = "block";
+      kaci.play();
+      setTimeout(function () {
+        kaci.style.display = "none";
+      }, 2000);
+    }
+
+    function micini(e) {
+      const micini = document.querySelector(".micini");
+      if (micini.style.display == "block") {
+        micini.style.display = "none";
+        micini.pause();
+      } else {
+        micini.style.display = "block";
+        micini.play();
+      }
+    }
+
+    function knofka3(e) {
+      const meloti = document.querySelector(".meloti");
+      meloti.style.display = "block";
+      setTimeout(function () {
+        meloti.style.display = "none";
+      }, 200);
+
+      meloti.style.top = Math.random() * 500 + "px";
+      meloti.style.left = Math.random() * 1000 + "px";
+    }
+  </script>
+</html>
