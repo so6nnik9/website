@@ -26,6 +26,13 @@
       text-align: center;
       margin-left: 70vw;
     }
+    .ieso {
+      position: absolute;
+      right: 28.3vw;
+      top: 2vh;
+      width: 150px;
+      transform: scaleX(-1);
+    }
     body {
       width: 10vh;
       height: 40vh;
@@ -72,12 +79,16 @@
       font-size: 26px;
       border-radius: 2cm;
       padding: 16px;
+      text-decoration: wavy;
     }
     .micini {
       position: absolute;
       top: 65vh;
       left: 40vw;
-      display: none;
+      display: block;
+      width: 0px;
+      height: 0px;
+      transition: 3s all;
     }
     .knofka3 {
       color: brown;
@@ -107,6 +118,12 @@
       <source src="videoplayback.mp4" type="video/webm" />
     </video>
     <h1 id="lela">yleoba</h1>
+    <img
+      src="xesusmtyvnesus.png"
+      alt=""
+      class="ieso"
+      onclick="iesoqristeXvako()"
+    />
     <h2>siroba</h2>
     <h5>yleoba</h5>
     <h1 class="mgeli">yvela mamatmavalis DEDAMOVTYAN</h1>
@@ -125,9 +142,11 @@
     <input class="mwovelaamwevdamwevi" type="range" max="360" min="0" />
     <button class="knofka2" onclick="micini()">momvals ganaxeb=)</button>
     <button class="knofka3" onclick="knofka3()">START</button>
-    <video class="micini" width="250">
+    <video class="micini" preload="auto" width="250">
       <source src="micini.mp4" />
     </video>
+    <audio src="doom.mp4" id="doom" />
+    <audio src="bonustrack.mp3" id="VAKO" />
   </body>
 
   <script>
@@ -139,7 +158,8 @@
 
     function sheYleo(e) {
       const kaci = document.querySelector(".kaci");
-      kaci.style.display = "block";
+      kaci.style.width = "0px";
+      kaci.style.height = "auto";
       kaci.play();
       setTimeout(function () {
         kaci.style.display = "none";
@@ -148,12 +168,18 @@
 
     function micini(e) {
       const micini = document.querySelector(".micini");
-      if (micini.style.display == "block") {
-        micini.style.display = "none";
+      const doom = document.querySelector("#doom");
+      if (micini.style.width == "250px") {
+        micini.style.width = "0px";
+        micini.style.height = "0px";
         micini.pause();
       } else {
-        micini.style.display = "block";
-        micini.play();
+        micini.style.width = "250px";
+        micini.style.height = "200px";
+        doom.play();
+        setTimeout(function () {
+          micini.play();
+        }, 2000);
       }
     }
 
@@ -166,6 +192,11 @@
 
       meloti.style.top = Math.random() * 500 + "px";
       meloti.style.left = Math.random() * 1000 + "px";
+    }
+
+    function iesoqristeXvako() {
+      const VAKO = document.querySelector("#VAKO");
+      VAKO.play();
     }
   </script>
 </html>
